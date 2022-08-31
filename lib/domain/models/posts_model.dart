@@ -1,10 +1,14 @@
 class PostsModel {
-  int? userId;
-  int? id;
-  String? title;
-  String? body;
+  late int userId;
+  late int id;
+  late String title;
+  late String body;
 
-  PostsModel({this.userId, this.id, this.title, this.body});
+  PostsModel(
+      {required this.userId,
+      required this.id,
+      required this.title,
+      required this.body});
 
   PostsModel.fromJson(Map<String, dynamic> json) {
     userId = json['userId'];

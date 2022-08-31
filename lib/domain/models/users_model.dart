@@ -1,12 +1,16 @@
 class UsersModel {
-  int? albumId;
-  int? userId;
-  String? name;
-  String? url;
-  String? thumbnailUrl;
+  late int albumId;
+  late int userId;
+  late String name;
+  late String url;
+  late String thumbnailUrl;
 
   UsersModel(
-      {this.albumId, this.userId, this.name, this.url, this.thumbnailUrl});
+      {required this.albumId,
+      required this.userId,
+      required this.name,
+      required this.url,
+      required this.thumbnailUrl});
 
   UsersModel.fromJson(Map<String, dynamic> json) {
     albumId = json['albumId'];

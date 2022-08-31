@@ -3,6 +3,7 @@ import 'package:floward/resources/theme.dart';
 import 'package:floward/ui/screens/home/home_screen.dart';
 import 'package:floward/ui/screens/post/post_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 export 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FlowardApp extends StatelessWidget {
@@ -14,13 +15,13 @@ class FlowardApp extends StatelessWidget {
       title: 'Floward Test App',
       theme: themeData,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
+      builder: EasyLoading.init(),
       supportedLocales: AppLocalizations.supportedLocales,
       onGenerateTitle: (BuildContext context) =>
           AppLocalizations.of(context)?.app_name ?? "Floward Text App",
-      initialRoute: '/HomePage',
+      initialRoute: '/HomeScreen',
       routes: {
-        "/HomePage": (context) => const HomeScreen(),
-        "/PostScreen": (context) => const PostScreen()
+        "/HomeScreen": (context) => const HomeScreen(),
       },
     );
   }
